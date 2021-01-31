@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
     <head>
-        <title>Internship Tutor</title>
-                    
+        <title>Internship Tutor</title>              
         <!-- bootstrap -->
         <#include "/bootstrap.ftl.html">
-        <link rel="shortcut icon" href="images/logo_page.png"/>
-        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+        <link rel="shortcut icon" href="assets/img/try1.png"/>
+            <link rel="stylesheet" href="styles/main.css" type="text/css"/>
         <link rel="stylesheet" href="styles/card.css" type="text/css"/>
         <link rel="stylesheet" href="styles/datatables_tab.css" type="text/css"/>
         <link href="styles/footer.css" rel="stylesheet" type="text/css"/>
@@ -24,41 +23,47 @@
     </head>
         
     <body>
-
+<!------>navigation bar (Home,Internship,companies, Contact us)-->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-lg fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+      
         <a class="navbar-brand logo" href="#">
-            <img src="images/logo_it.png" width="40" height="40" class="d-inline-block align-top" alt="logo" title="logo">
+            <img src="assets/img/try.png" width="70" height="70" class="d-inline-block align-top" alt="logo" title="logo">
         </a>
+     
+        <div class="collapse navbar-collapse collapseJS" id="navbarTogglerDemo03" style="padding-left: 100px">
 
-        <div class="collapse navbar-collapse collapseJS" id="navbarTogglerDemo03">
-
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 drop-men">
-                <li class="nav-item ${activeHome!}">
-                   <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
+            <ul class=" navbar-nav mr-auto mt-2 mt-lg-0 drop-men" >
+                <li class="nav-item ${activeHome!}" style="padding-left: 10px" >
+                   <a class="nav-link " href="home">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item ${activeAziende!}">
-                    <a class="nav-link" href="aziende">Aziende</a>
+                <li class="nav-item ${activeAziende!}" style="padding-left: 30px">
+                    <a class="nav-link " href="aziende">Aziende</a>
                 </li>
-                <li class="nav-item ${activeTirocini!}">
+                <li class="nav-item ${activeTirocini!}" style="padding-left: 30px">
                     <a class="nav-link " href="tirocini">Tirocini</a>
                 </li>
+                <li class="nav-item ${activeTirocini!}" style="padding-left: 30px">
+                    <a class="nav-link " href="tirocini">Contact us</a>
+                </li>
+<!--                about statitics-->
                 <#if tipologia??>
                 <#if tipologia == 'ad'>
                 <li class="nav-item ${activeStat!}">
                     <a class="nav-link " href="statistiche">Statistiche</a>
                 </li>
                 </#if>
-                </#if>
+                </#if>    
             </ul>
-            <ul class="navbar-nav justify-content-end">
+            <ul class="navbar-nav justify-content-end" >
+                <span class ="navbar-text d-none d-xl-inline-block " style="color: white ; padding-right: 100px ; font-size: 20    px">KEEP TRAINING AND KEEP LEARNING UNTIL YOU GET IT RIGHT!!</span>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown active float-right">
                     <#if nome_utente??>
-                    <a class="nav-link dropdown-nav-noJS" href="#" id="navbardrop">
+                    <a class="nav-link dropdown-toggle dropdown-nav-JS" href="#" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user-circle"></i>&nbsp;
                         <b> ${nome_utente}</b>
                         <div class="divider_menu"></div>
@@ -70,15 +75,23 @@
                         <div class="divider_menu"></div>
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right"> <!-- noscript aggiungere dropdown -->
-                        <a class="dropdown-item" href="profilo"><i class="fas fa-user"></i> Profilo</a>
+<!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>-->
+<!--                            noscript aggiungere dropdown -->
+                    <div class="dropdown-menu dropdown-menu-right">  
+                        <a class="dropdown-item" href="profilo"> class="fas fa-user"> Profilo</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-                    </div>
-                    <#else>
-                    <a class="nav-link" href="login"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Login</a>
+                        <a class="dropdown-item" href="logout"><i class="fas fa-sign-out-alt"></i> Logout</a><!--
+                        
+-->                    </div><!--
+-->                    <#else>
+                    <b><a class="nav-link" href="login" style="color: yellow"><i class="fas fa-sign-in-alt" style="color: #071527"></i>&nbsp;&nbsp;Login</a></b>
                     </#if>
-                </li>
+                </li><!--
 
                     <!-- <noscript> -->
                         <#if nome_utente??>

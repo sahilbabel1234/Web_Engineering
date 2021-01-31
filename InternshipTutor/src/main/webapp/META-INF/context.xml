@@ -8,8 +8,8 @@
       driverClassName="com.mysql.cj.jdbc.Driver"
       maxActive="10" maxIdle="5" maxWait="10000"
       name="jdbc/itdb"
-      username="internship"
-      password="internship"
+      username="root"
+      password=""
       type="javax.sql.DataSource"
       url="jdbc:mysql://localhost/internship_tutor?serverTimezone=UTC"
   />

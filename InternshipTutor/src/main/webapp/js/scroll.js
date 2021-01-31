@@ -3,3 +3,4 @@ $('.click_to_scroll').click(function(){
     $('html, body').animate({ scrollTop: ($(clickedId).offset().top)} , 1000);
     return false;
 });
+
