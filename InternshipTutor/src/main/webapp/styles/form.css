@@ -45,9 +45,7 @@
 }
 .register-right{
     background: #f8f9fa;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
-}
+    }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {

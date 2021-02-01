@@ -1,0 +1,74 @@
+body {
+/*  font-size: 14px;
+  line-height: 1.8;
+  color: #222;
+  font-weight: 400;
+  font-family: 'Montserrat';*/
+line-height: 1.8;
+  background-image: url("../images/signup-bg.jpg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-position: center top;
+  padding: 115px 0; 
+}
+
+body{
+  display: block;
+margin : 8px;  
+       
+}
+
+.container {
+  width: 790px;
+  position: relative;
+  margin: 0 auto; }
+
+.register-right {
+    background: #f8f9fa;
+    border-top-left-radius: 0% 0%;
+    border-bottom-left-radius: 0% 0%;    
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+    .register-right {
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+}
+
+.h3 , h3{
+    font-size: medium;  
+     
+}
+
+.register-heading{
+    
+    margin-top: 4%;
+     font-size: larger;
+/*     border: 2px solid #040505;
+      border-radius: 5px;  */
+}
+.info-campi{
+  
+  padding: 8px;
+  font-family: Arial;
+  background-color: #e7e7e7;
+  
+    
+}
+.form-group{
+    
+    width: 100%;
+    padding: 0 5px;
+    
+}
+
+.form-group {
+  margin-bottom: 23px;
+  position: relative; }s
