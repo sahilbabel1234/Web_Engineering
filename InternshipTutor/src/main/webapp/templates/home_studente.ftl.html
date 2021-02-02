@@ -1,65 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="styles/st_page.css">
+</head>
+
+<style> 
+table {
+  border-collapse: collapse;
+  width: 100%;
+/*  border: 2px solid black;*/
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+
 <div class="row">
     <div class="col mx-auto text-center mb-5">
         <h2>Tirocini</h2>
     </div>
 </div>
 
-<div class="row notification-request-student">
-    
-    <div class="col-2 mx-auto notice-student notice-success">
+<section id="services" class="services section-bg">
+
+      
+
+<div class="container" data-aos="fade-up">
+
+     
+
         <div class="row">
-            <div class="col-9">
-                <strong>Attivi</strong> <br>
-                ${candidature_attive?size}
+
+          <div class="col-lg-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="fas fa-briefcase fa-2x" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a><strong>Attivi</strong> <br>
+                ${candidature_attive?size}</a></h4>
+              
             </div>
-            <div class="col-2 my-auto">
-                <i class="fas fa-briefcase fa-2x"></i>
+          </div>
+          <div class="col-lg-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="fas fa-hourglass-start fa-2x" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a><strong>In attesa</strong> <br>
+                ${candidature_attesa?size}</a></h4>
+              
             </div>
+          </div>
+            <div class="col-lg-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="fas fa-check fa-2x" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a><strong>Conclusi</strong> <br>
+                ${candidature_finite?size}</a></h4>
+              
+            </div>
+          </div>
+          <div class="col-lg-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="fas fa-trash fa-2x" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a><strong>Rifiutati</strong> <br>
+                ${candidature_rifiutate?size}</a></h4>
+              
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class="col-2 mx-auto notice-student notice-warning">
-        <div class="row">
-            <div class="col-9">
-                <strong>In attesa</strong> <br>
-                ${candidature_attesa?size}
-            </div>
-            <div class="col-3 my-auto">
-                <i class="fas fa-hourglass-start fa-2x"></i>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-2 mx-auto notice-student notice-primary">
-        <div class="row">
-            <div class="col-9">
-                <strong>Conclusi</strong> <br>
-                ${candidature_finite?size}
-            </div>
-            <div class="col-3 my-auto">
-                <i class="fas fa-check fa-2x"></i>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-2 mx-auto notice-student notice-danger">
-        <div class="row">
-            <div class="col-9">
-                <strong>Rifiutati</strong> <br>
-                ${candidature_rifiutate?size}
-            </div>
-            <div class="col-3 my-auto">
-                <i class="fas fa-trash fa-2x"></i>
-            </div>
-        </div>
-    </div>
-    
-</div>
+</section>
 
 
+      
 <div class="tab-student home-studente-js">
     <nav>
-        <div class="nav nav-tabs nav-fill tab-table" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs nav-fill tab-table " id="nav-tab" role="tablist">
             <a class="nav-item nav-link item-tab-table active" id="nav-tiro-attivi-tab" data-toggle="tab" href="#nav-tiro-ok" role="tab" aria-controls="nav-tiro-attivi-tab" aria-selected="false" >Attivi</a>
             <a class="nav-item nav-link item-tab-table" id="nav-tiro_attesa-tab" data-toggle="tab" href="#nav-tiro-att" role="tab" aria-controls="nav-tiro_attesa-tab" aria-selected="true" >In Attesa</a>
             <a class="nav-item nav-link item-tab-table" id="nav-tiro-finiti-tab" data-toggle="tab" href="#nav-tiro-end" role="tab" aria-controls="nav-tiro-finiti-tab" aria-selected="false" >Conclusi</a>
@@ -507,6 +529,10 @@
 
 </noscript>
 
+<script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 
 
