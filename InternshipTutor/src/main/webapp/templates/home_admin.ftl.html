@@ -1,44 +1,52 @@
-<div class="mt-3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
 
-    <div class="row notification-request">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-        <div class="col-3 mx-auto notice notice-success">
-            <div class="row">
-                <div class="col-9">
-                    <strong>Convenzioni</strong> <br>
-                    ${num_az_convenzionate}
-                </div>
-                <div class="col-3 my-auto">
-                    <i class="fas fa-briefcase fa-2x"></i>
-                </div>
+    
+    <!-- Main css -->
+    <link rel="stylesheet" href="styles/st_page.css">
+    
+    
+</head>
+<!--<div class="mt-3">-->
+<section id="services" class="services section-bg">
+
+<div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-4 col-lg-3 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="fas fa-briefcase fa-2x" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a><strong>Convenzioni</strong> <br>
+                ${num_az_convenzionate}</a></h4>
+              
             </div>
+          </div>
+          <div class="col-lg-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="fas fa-hourglass-start fa-2x" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a><strong>Richieste in attesa</strong> <br>
+                 ${num_az_registrate}</a></h4>
+              
+            </div>
+          </div>
+            <div class="col-lg-4 col-lg-3 " data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="fas fa-trash fa-2x" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a><strong>Richieste rifiutate</strong> <br>
+                 ${num_az_rifiutate}</a></h4>
+              
+            </div>
+          </div>
+          
         </div>
-
-        <div class="col-3 mx-auto notice notice-warning">
-            <div class="row">
-                <div class="col-9">
-                    <strong>Richieste in attesa</strong> <br>
-                    ${num_az_registrate}
-                </div>
-                <div class="col-3 my-auto">
-                    <i class="fas fa-hourglass-start fa-2x"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mx-auto notice notice-danger">
-            <div class="row">
-           <div class="col-9">
-               <strong>Richieste rifiutate</strong> <br>
-               ${num_az_rifiutate}
-           </div>
-            <div class="col-3 my-auto">
-                <i class="fas fa-trash fa-2x"></i>
-            </div>
-            </div>
-        </div>
-
-    </div>
+</div>
+</section>
+    
 
 
     <section id="tabs" class="project-tab home-admin-js">
@@ -207,7 +215,6 @@
 
 
 
-
 <noscript>
 
     <h2 class="text-center mt-5">Richieste In Attesa</h2>
@@ -343,6 +350,10 @@
 </noscript>
 
 </div>
+<script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 <script>
     $(document).ready(function() {

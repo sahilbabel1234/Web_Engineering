@@ -1,3 +1,64 @@
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  min-height: 60vh;
+  background: #009FFF;
+background: linear-gradient(to right, #ec2F4B, #009FFF);
+  color: white;
+  clip-path: ellipse(100vw 60vh at 50% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details {
+  text-align: center;
+}
+
+.profile-pic {
+  height: 8rem;
+  width: 8rem;
+  object-fit: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.profile-side-pic {
+  align-self: flex-start;
+  object-fit: left;
+/*  border-radius: 50%;
+  border: 2px solid #fff;*/
+}
+
+.location p {
+  display: inline-block;
+}
+
+.location svg {
+  vertical-align: middle;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats .col-4 {
+  width: 10rem;
+  text-align: center;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+</style>
 <#if MSG?has_content> <!-- check if content exist and is not empty -->
 <div class="container">
     <div class="alert alert-${alert} alert-dismissible } fade show" role="alert">
@@ -11,13 +72,45 @@
 </#if>
 
 <!-- if student -->
+    
+
 <#if studente?has_content && !visualize??>
+<section class="profile">
+  <header class="header">
+    <div class="details">
+<!--        <img src="assets/img/try.png" alt="profile side image" class="profile-side-pic">-->
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="John Doe" class="profile-pic">
+      <h1 class="heading">${studente.nome} ${studente.cognome}</h1>
+<!--      <div class="location">
+        <svg width="28" height="18" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12 ,2Z"></path>
+</svg>
+        <p>Kochi, India</p>
+      </div>-->
+      <div class="stats">
+        <div class="col-4">
+          <h4>${candidature_attive}</h4>
+          <p>Internship in Progress</p>
+        </div>
+        <div class="col-4">
+          <h4>${candidature_finite}</h4>
+          <p>Internships Concluded</p>
+        </div>
+        <div class="col-4">
+          <h4>${candidature_attesa}</h4>
+          <p>Internships Pending</p>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
 <div class="card text-center shadow p-3 mb-5 bg-white rounded">
     <div class="card-body">
         <!-- if no foto -->
-        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle" style="height: 250px; width: 250px" alt="">
+<!--        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle" style="height: 250px; width: 250px" alt="">-->
 
-        <h2 class="text-center" style="margin-top: 15px">
+<!--        <h2 class="text-center" style="margin-top: 15px">
             ${studente.nome} ${studente.cognome}
         </h2>
 
@@ -38,7 +131,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <form role="form" method="post" id="profileStudente" action="profilo" style="margin-top: 55px;">
             <div class="row">
@@ -209,14 +302,45 @@
 
 
 <#if admin?has_content>
+<section class="profile">
+  <header class="header">
+    <div class="details">
+<!--        <img src="assets/img/try.png" alt="profile side image" class="profile-side-pic">-->
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="John Doe" class="profile-pic">
+      <h2 class="text-center" style="margin-top: 30px">
+            ADMIN
+        </h2>
+<!--      <div class="location">
+        <svg width="28" height="18" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12 ,2Z"></path>
+</svg>
+        <p>Kochi, India</p>
+      </div>-->
+<!--      <div class="stats">
+        <div class="col-4">
+          <h4>${candidature_attive}</h4>
+          <p>Internship in Progress</p>
+        </div>
+        <div class="col-4">
+          <h4>${candidature_finite}</h4>
+          <p>Internships Concluded</p>
+        </div>
+        <div class="col-4">
+          <h4>${candidature_attesa}</h4>
+          <p>Internships Pending</p>
+        </div>
+      </div>-->
+    </div>
+  </header>
+</section>
 <div class="card text-center shadow p-3 mb-5 bg-white rounded">
     <div class="card-body">
         <!-- if no foto -->
-        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle" style="height: 250px; width: 250px">
+<!--        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle" style="height: 250px; width: 250px">
 
         <h2 class="text-center" style="margin-top: 30px">
             ADMIN
-        </h2>
+        </h2>-->
 
         <form role="form" method="post" id="profileAdmin" action="profilo" style="margin-top: 55px;">
             <div class="row">

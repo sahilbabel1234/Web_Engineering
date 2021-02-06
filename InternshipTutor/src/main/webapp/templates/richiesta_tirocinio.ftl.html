@@ -1,3 +1,8 @@
+<head><!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="styles/richiesta.css">
+        </head>
 <#if MSG?has_content> <!-- check if content exist and is not empty -->
 <div class="container" xmlns="http://java.sun.com/jsf/html">
     <div class="alert alert-${alert} alert-dismissible } fade show" role="alert">
@@ -10,12 +15,47 @@
 </div>
 </#if>
 
+<section id="features" class="features">
+      <div class="container" data-aos="fade-up">
 
+        <div class="row">
+          <div class="image col-lg-6"  style='background-image: url("assets/img/features.jpg");' data-aos="fade-right"></div>
+<!--          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+
+
+
+            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-receipt"></i>
+              <h4>Est labore ad</h4>
+              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Harum esse qui</h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-images"></i>
+              <h4>Aut occaecati</h4>
+              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-shield"></i>
+              <h4>Beatae veritatis</h4>
+              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+            </div>
+          </div>-->
+<!--        </div>-->
+
+<!--      </div>
+    </section>-->
+
+<div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-8 mx-auto">
-            <div class="card text-center">
-                <div class="card-header">
+            <div class="card text-center" style="width: 600px">
+                <div class="card-header" st>
                     <i class="fas fa-share-square mr-2"></i>Richiesta Tirocinio
                 </div>
                 <div class="card-body">
@@ -63,11 +103,13 @@
             </div>
         </div>
     </div>
+</div>
+</div>
+</section>
 
 
 
-
-    <div class="row" id="newTut" style="margin-top: 150px">
+    <div class="row" id="newTut" style="margin-top: 50px">
         <div class="col-12 col-md-8 mx-auto" style="padding-top: 70px">
             <div class="card text-center">
                 <div class="card-header">
@@ -140,3 +182,7 @@
 </script>
 
 <script src="js/scroll.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>

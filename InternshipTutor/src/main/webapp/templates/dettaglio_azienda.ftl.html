@@ -1,3 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+   <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="styles/azienda.css">
+    
+   
+</head>
+<body style="background-color: white">
 <div class="mx-auto dettaglio-azienda-js">
     
     <#if (azienda?size>0 && azienda.statoConvenzione==1)>
@@ -18,24 +34,68 @@
         <div class="tab-content" id="nav-tabContent">
             
             <div class="tab-pane fade show active pt-4" id="nav-infoAz" role="tabpanel" aria-labelledby="nav-informazioni-tab">
+    
+                <section id="services" class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="icon-box" style="padding: 80px 20px">
+              <div class="icon"><i class="fas fa-map-marker-alt pr-2"></i></div>
+              <h4><a href=""><strong>Address of Company</strong></a></h4>
+              <p style="font-size: 1rem">${azienda.indirizzo}, ${azienda.citta} (${azienda.provincia}), ${azienda.cap}</p>
+            </div>
+          </div>
+            
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-briefcase pr-2"></i></div>
+              <h4><a href=""><strong>Domain of Expertise</strong></a></h4>
+              <p style="font-size: 1rem">${azienda.corsoStudio}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-user pr-2"></i></div>
+              <h4><a href=""><strong>Legal Representative</strong></a></h4>
+              <p style="font-size: 1rem">${azienda.rappresentanteLegale}</p>
+            </div>
+          </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" style="padding: 80px 20px">
+              <div class="icon"><i class="far fa-file-alt pr-2"></i></div>
+              <h4><a href=""><strong>VAT identification </strong></a></h4>
+              <p style="font-size: 1rem">${azienda.piva}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-building pr-2"></i></div>
+              <h4><a href=""><strong>Jurisdiction</strong></a></h4>
+              <p style="font-size: 1rem">${azienda.foroCompetente}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="far fa-clock pr-2"></i></div>
+              <h4><a href=""><strong>Agreement duration</strong></a></h4>
+              <p style="font-size: 1rem">${azienda.durataConvenzione} mesi</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+            </section>
                 <div class="row">
-                    <div class="col-10 mx-auto col-md-7 card border-0">
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-map-marker-alt pr-2"></i><strong>Indirizzo:</strong> ${azienda.indirizzo}, ${azienda.citta} (${azienda.provincia}), ${azienda.cap}</li>
-                                <li class="list-group-item"><i class="fas fa-briefcase pr-2"></i><strong>Competenza:</strong> ${azienda.corsoStudio}</li>
-                                <li class="list-group-item"><i class="fas fa-user pr-2"></i><strong>Rappresentante Legale:</strong> ${azienda.rappresentanteLegale}</li>
-                                <li class="list-group-item"><i class="far fa-file-alt pr-2"></i><strong>Partita IVA:</strong> ${azienda.piva}</li>
-                                <li class="list-group-item"><i class="fas fa-building pr-2"></i><strong>Foro competente:</strong> ${azienda.foroCompetente}</li>
-                                <li class="list-group-item"><i class="far fa-clock pr-2"></i><strong>Durata convenzione:</strong> ${azienda.durataConvenzione} mesi</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
+                
                     <div class="col-10 mx-auto col-md-5 mapouter">
                         <div class="spinner-border text-primary loader" style="margin: 30%; height: 100px; width: 100px"></div>
                         <div class="gmap_canvas">
-                            <iframe style="width:100%; height:100%;" id="gmap_canvas" src="https://maps.google.com/maps?q=${azienda.indirizzo}%20${azienda.citta}%20${azienda.provincia}%20${azienda.cap}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" ></iframe>
+                            <iframe style="width:900px; height:370px;" id="gmap_canvas" src="https://maps.google.com/maps?q=${azienda.indirizzo}%20${azienda.citta}%20${azienda.provincia}%20${azienda.cap}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" ></iframe>
                         </div>
                     </div>
                 </div>
@@ -327,7 +387,7 @@
     
 </div>
 </noscript>
-
+</body>
 
 
 
